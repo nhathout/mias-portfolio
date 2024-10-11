@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffccff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+header h1 {
+    margin: 0;
+    font-size: 44px;
+    color: #660066;
+    margin-right: auto; /* Pushes the NAME to the right */
+}
+
+/* Navigation Styles */
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #660066;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav a:hover {
+    color: #cc33cc;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #660066;
+    border-bottom: 2px solid #ffccff;
+    padding-bottom: 10px;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery img {
+    max-width: 100%;
+    border: 5px solid #ffccff;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ffccff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    color: #660066;
+}
