@@ -1,175 +1,131 @@
 /* General Styles */
-body {
-    font-family: 'Arial, sans-serif';
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Landing Page Styles */
-  .landing-page {
-    background-image: url('placeholder'); /* Replace 'placeholder' with your background image path */
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  /* Aisle Button */
-  .aisle-button {
-    position: absolute;
-    /* Adjust the position to match the aisle in your background image */
-    top: 50%; /* Adjust as needed */
-    left: 50%; /* Adjust as needed */
-    transform: translate(-50%, -50%);
-    padding: 20px 40px;
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #333;
-    text-decoration: none;
-    font-size: 24px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .aisle-button:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-  
-  /* Header Styles */
-  header {
-    background-color: #ffccff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
-  }
-  
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 44px;
-    color: #660066;
-    margin-right: auto; /* Pushes the NAME to the right */
-  }
-  
-  /* Navigation Styles */
-  nav {
-    margin: 20px 0;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #660066;
-    font-weight: bold;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  nav a:hover {
-    color: #cc33cc;
-  }
-  
-  /* Main Content Styles */
-  main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  section {
-    margin-bottom: 40px;
-  }
-  
-  section h2 {
-    font-size: 2em;
-    color: #660066;
-    border-bottom: 2px solid #ffccff;
-    padding-bottom: 10px;
-  }
-  
-  /* Gallery Styles */
-  .gallery-section {
-    padding: 20px;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial, sans-serif';
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Landing Page Styles */
+.landing-page {
+  background-image: url('landing-image.jpg'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+}
+
+/* Vision Button */
+.vision-button {
+  position: absolute;
+  /* Adjust the position as desired */
+  top: 50%; /* Example position */
+  left: 50%; /* Example position */
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.vision-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Home Button Styles */
+.home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.home-button img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Gallery Section Styles */
+.gallery-section {
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Artwork Styles */
+.artwork {
+  width: 100%;
+  max-width: 80%; /* Adjusts the size of the artwork relative to the viewport */
+  perspective: 1000px;
+}
+
+.artwork-inner {
+  position: relative;
+  width: 100%;
+  /* Use the aspect ratio of your images here */
+  padding-top: 66.66%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.artwork:hover .artwork-inner {
+  transform: rotateY(180deg);
+}
+
+.artwork-front,
+.artwork-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* For Safari */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.artwork-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.artwork-back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+  border: 2px solid #ffccff;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;   /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+  text-align: center;
+}
+
+.artwork-back p {
+  margin: 0;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .artwork {
-    width: calc(25% - 20px); /* Four items per row */
-    perspective: 1000px;
+    max-width: 100%;
   }
-  
-  .artwork-inner {
-    position: relative;
-    width: 100%;
-    padding-top: 100%; /* 1:1 Aspect Ratio */
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-  }
-  
-  .artwork:hover .artwork-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .artwork-front,
-  .artwork-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-  
-  .artwork-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .artwork-back {
-    background-color: #fff;
-    transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #ffccff;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  .artwork-back p {
-    margin: 0;
-    color: #333;
-  }
-  
-  /* Footer Styles */
-  footer {
-    background-color: #ffccff;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  footer p {
-    margin: 0;
-    color: #660066;
-  }
-  
+}
