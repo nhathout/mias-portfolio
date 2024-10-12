@@ -5,13 +5,13 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: 'Arial, sans-serif';
-  background-color: #f9f9f9;
+  background-color: #fff5e0e5;
   color: #333;
 }
 
 /* Landing Page Styles */
 .landing-page {
-  background-image: url('landing-image.jpg'); /* Replace with your background image path */
+  background-image: url('landing-screen.jpg'); /* Replace with your background image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@ body, html {
 .vision-button {
   position: absolute;
   /* Adjust the position as desired */
-  top: 50%; /* Example position */
+  top: 22%; /* Example position */
   left: 50%; /* Example position */
   transform: translate(-50%, -50%);
   padding: 15px 30px;
@@ -39,7 +39,7 @@ body, html {
 }
 
 .vision-button:hover {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(209, 209, 209);
 }
 
 /* Home Button Styles */
@@ -51,26 +51,29 @@ body, html {
 }
 
 .home-button img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 /* Gallery Section Styles */
 .gallery-section {
   padding: 20px;
+  padding-top: 200px;
 }
 
 .gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 80px;
 }
 
 /* Artwork Styles */
 .artwork {
   width: 100%;
-  max-width: 80%; /* Adjusts the size of the artwork relative to the viewport */
+  max-width: 45%; /* Adjusts the size of the artwork relative to the viewport */
+  height: 100%;
+  max-height: 40%;
   perspective: 1000px;
 }
 
@@ -78,12 +81,103 @@ body, html {
   position: relative;
   width: 100%;
   /* Use the aspect ratio of your images here */
-  padding-top: 66.66%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  padding-top: 80.714%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  transform-style: preserve-3d;
+  transition: transform .6s;
+}
+
+.artwork-inner1 {
+  position: relative;
+  width: 100%;
+  /* Use the aspect ratio of your images here */
+  padding-top: 130.264%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.artwork-inner2 {
+  position: relative;
+  width: 100%;
+  /* Use the aspect ratio of your images here */
+  padding-top: 125.542%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.artwork-inner3 {
+  position: relative;
+  width: 100%;
+  /* Use the aspect ratio of your images here */
+  padding-top: 99.552%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.artwork-inner4 {
+  position: relative;
+  width: 100%;
+  /* Use the aspect ratio of your images here */
+  padding-top: 98.949%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.artwork-inner5 {
+  position: relative;
+  width: 100%;
+  /* Use the aspect ratio of your images here */
+  padding-top: 79.534%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.artwork-inner6 {
+  position: relative;
+  width: 100%;
+  /* Use the aspect ratio of your images here */
+  padding-top: 72.985%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.artwork-inner7 {
+  position: relative;
+  width: 100%;
+  /* Use the aspect ratio of your images here */
+  padding-top: 71.280%; /* For a 3:2 aspect ratio image, (height/width)*100% */
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
 
 .artwork:hover .artwork-inner {
+  transform: rotateY(180deg);
+}
+
+.artwork:hover .artwork-inner1 {
+  transform: rotateY(180deg);
+}
+
+.artwork:hover .artwork-inner2 {
+  transform: rotateY(180deg);
+}
+
+.artwork:hover .artwork-inner3 {
+  transform: rotateY(180deg);
+}
+
+.artwork:hover .artwork-inner4 {
+  transform: rotateY(180deg);
+}
+
+.artwork:hover .artwork-inner5 {
+  transform: rotateY(180deg);
+}
+
+.artwork:hover .artwork-inner6 {
+  transform: rotateY(180deg);
+}
+
+.artwork:hover .artwork-inner7 {
   transform: rotateY(180deg);
 }
 
@@ -107,9 +201,8 @@ body, html {
 }
 
 .artwork-back {
-  background-color: #fff;
+  background-color: #585554;
   transform: rotateY(180deg);
-  border: 2px solid #ffccff;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -120,7 +213,7 @@ body, html {
 
 .artwork-back p {
   margin: 0;
-  color: #333;
+  color: #bdb49ee5;
 }
 
 /* Responsive Adjustments */
