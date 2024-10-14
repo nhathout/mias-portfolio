@@ -81,7 +81,7 @@ body, html {
   position: relative;
   width: 100%;
   /* Use the aspect ratio of your images here */
-  padding-top: 80.714%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  padding-top: 79.534%; /* For a 3:2 aspect ratio image, (height/width)*100% */
   transform-style: preserve-3d;
   transition: transform .6s;
 }
@@ -90,7 +90,7 @@ body, html {
   position: relative;
   width: 100%;
   /* Use the aspect ratio of your images here */
-  padding-top: 130.264%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  padding-top: 89.065%; /* For a 3:2 aspect ratio image, (height/width)*100% */
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
@@ -99,7 +99,7 @@ body, html {
   position: relative;
   width: 100%;
   /* Use the aspect ratio of your images here */
-  padding-top: 125.542%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  padding-top: 128.535%; /* For a 3:2 aspect ratio image, (height/width)*100% */
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
@@ -108,7 +108,7 @@ body, html {
   position: relative;
   width: 100%;
   /* Use the aspect ratio of your images here */
-  padding-top: 99.552%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  padding-top: 77.702%; /* For a 3:2 aspect ratio image, (height/width)*100% */
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
@@ -117,7 +117,7 @@ body, html {
   position: relative;
   width: 100%;
   /* Use the aspect ratio of your images here */
-  padding-top: 98.949%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  padding-top: 101.286%; /* For a 3:2 aspect ratio image, (height/width)*100% */
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
@@ -126,7 +126,7 @@ body, html {
   position: relative;
   width: 100%;
   /* Use the aspect ratio of your images here */
-  padding-top: 79.534%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  padding-top: 134.609%; /* For a 3:2 aspect ratio image, (height/width)*100% */
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
@@ -135,12 +135,21 @@ body, html {
   position: relative;
   width: 100%;
   /* Use the aspect ratio of your images here */
-  padding-top: 72.985%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  padding-top: 133.815%; /* For a 3:2 aspect ratio image, (height/width)*100% */
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
 
 .artwork-inner7 {
+  position: relative;
+  width: 100%;
+  /* Use the aspect ratio of your images here */
+  padding-top: 71.280%; /* For a 3:2 aspect ratio image, (height/width)*100% */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.artwork-inner8 {
   position: relative;
   width: 100%;
   /* Use the aspect ratio of your images here */
