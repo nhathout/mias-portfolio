@@ -57,8 +57,8 @@ body, html {
 
 /* Gallery Section Styles */
 .gallery-section {
-  padding: 20px;
-  padding-top: 200px;
+  padding: 50px;
+  padding-top: 70px;
 }
 
 .gallery {
@@ -225,22 +225,38 @@ body, html {
   object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
+/* Remove flex properties and ensure it fills the container */
 .artwork-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ensure it fills the container */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* For Safari */
+  border-radius: 10px;
+  overflow: hidden;
   background-color: #585554;
   transform: rotateY(180deg);
   padding: 20px;
   box-sizing: border-box;
-  display: flex;
-  align-items: center;   /* Centers vertically */
-  justify-content: center; /* Centers horizontally */
+  display: block; /* Change to block to prevent shrinking */
   text-align: center;
 }
 
-.artwork-back p {
-  margin: 0;
-  color: #bdb49ee5;
+.artwork-back-content {
+  height: 100%; /* Fill the backside container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Center horizontally */
 }
 
+.artwork-back p {
+  margin: 10px 0 0 0;
+  color: #bdb49ee5;
+}
+   
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .artwork {
@@ -320,4 +336,77 @@ body, html {
   font-family: "Gloria Hallelujah", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 2000; /* Above other elements */
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (the image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 87%;
+}
+
+/* Caption text */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.view-larger-button {
+  position: absolute; /* Position the button absolutely */
+  top: 10px;          /* Distance from the top edge */
+  right: 10px;        /* Distance from the right edge */
+  padding: 8px 12px;
+  background-color: #bdb49e;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.view-larger-button:hover {
+  background-color: #a59c8a;
+}
+
+.view-larger-button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
