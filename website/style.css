@@ -1,34 +1,42 @@
+/* Global box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* General Styles */
 body, html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: "Gloria Hallelujah", cursive;
-  font-weight: bold;
-  background-color: #fff5e0e5;
-  color: #333;
 }
 
 /* Landing Page Styles */
 .landing-page {
-  background-image: url('landing-screen.jpg'); /* Replace with your background image path */
+  background-image: url('mia-landing.jpg'); /* Replace with your background image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh; /* Full viewport height */
   position: relative;
+
+  font-family: "american typewriter", serif;
+  font-weight: bold;
+  background-color: #fff5e0e5;
+  color: #333;
 }
 
 /* Vision Button */
 .vision-button {
   position: absolute;
-  top: 34%; 
+  top: 38.5%; 
   left: 50%; 
   transform: translate(-50%, -50%);
   padding: 5px 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.867);
   color: #333;
   text-decoration: none;
   font-size: 24px;
@@ -39,7 +47,8 @@ body, html {
 }
 
 .vision-button:hover {
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(190, 172, 223);
+  color: #000;
 }
 
 /* Home Button Styles */
@@ -262,12 +271,17 @@ body, html {
   .artwork {
     max-width: 100%;
   }
+
+  .about-me-content{
+    max-width: 90%;
+    padding: 15px;
+  }
 }
 
 /* About Me Button */
 .about-me-button {
   position: absolute;
-  top: 24%;
+  top: 31.75%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 5px 10px;
@@ -282,7 +296,8 @@ body, html {
 }
 
 .about-me-button:hover {
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(190, 172, 223);
+  color: #000;
 }
 
 /* About Me Page Styles */
@@ -290,35 +305,50 @@ body, html {
   width: 100%;
   height: 100vh;
   position: relative;
+
+  font-family: "chalkduster", fantasy;
+  background-color: #fff5e0e5;
 }
 
 .about-me-background {
-  background-image: url('placeholder-image.jpg'); /* Replace with your background image */
+  background-image: url('art.jpg'); /* Replace with your background image */
   background-size: cover;
   background-position: center;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  z-index: -1;
+  position: fixed;
 }
 
 .about-me-content {
-  position: absolute;
+  position: relative;
+  max-width: 800px;
+  width: 80%;
+  margin: 10px 20px;
+  padding: 6px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+  box-sizing: border-box;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff; /* Adjust text color for readability */
   text-align: center;
-  padding: 20px;
+
   background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for text */
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .about-me-content h1 {
   margin-bottom: 20px;
-  font-size: 48px;
+  font-size: 30px;
 }
 
 .about-me-content p {
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 /* Instruction Text Styles */
