@@ -93,7 +93,7 @@ body, html {
 }
 
 body.vision-page {
-  background-color: #53514c;
+  background-color: #44423e;
 }
 
 /* Gallery Section Styles */
@@ -220,7 +220,7 @@ body.vision-page {
   -webkit-backface-visibility: hidden;
   overflow: hidden; /* Keep this to maintain rounded corners */
   overflow-y: auto; /* Enable scrolling */
-  background-color: #333333; /* Dark gray background */
+  background-color: #272525; /* Dark gray background */
   transform: rotateY(180deg);
   padding: 20px;
   box-sizing: border-box;
