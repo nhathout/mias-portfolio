@@ -11,6 +11,7 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
+  font-family: "Arial", sans-serif; 
 }
 
 /* Landing Page Styles */
@@ -91,6 +92,10 @@ body, html {
   height: 60px;
 }
 
+body.vision-page {
+  background-color: #74716c;
+}
+
 /* Gallery Section Styles */
 .gallery-section {
   padding: 50px;
@@ -108,91 +113,36 @@ body, html {
 .artwork {
   width: 100%;
   max-width: 45%; /* Adjusts the size of the artwork relative to the viewport */
-  height: 100%;
-  max-height: 40%;
   perspective: 1000px;
 }
 
-.artwork-inner {
-  position: relative;
-  width: 100%;
-  /* Use the aspect ratio of your images here */
-  padding-top: 79.534%; /* For a 3:2 aspect ratio image, (height/width)*100% */
-  transform-style: preserve-3d;
-  transition: transform .6s;
-}
-
-.artwork-inner1 {
-  position: relative;
-  width: 100%;
-  /* Use the aspect ratio of your images here */
-  padding-top: 89.065%; /* For a 3:2 aspect ratio image, (height/width)*100% */
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.artwork-inner2 {
-  position: relative;
-  width: 100%;
-  /* Use the aspect ratio of your images here */
-  padding-top: 128.535%; /* For a 3:2 aspect ratio image, (height/width)*100% */
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.artwork-inner3 {
-  position: relative;
-  width: 100%;
-  /* Use the aspect ratio of your images here */
-  padding-top: 77.702%; /* For a 3:2 aspect ratio image, (height/width)*100% */
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.artwork-inner4 {
-  position: relative;
-  width: 100%;
-  /* Use the aspect ratio of your images here */
-  padding-top: 101.286%; /* For a 3:2 aspect ratio image, (height/width)*100% */
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.artwork-inner5 {
-  position: relative;
-  width: 100%;
-  /* Use the aspect ratio of your images here */
-  padding-top: 134.609%; /* For a 3:2 aspect ratio image, (height/width)*100% */
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.artwork-inner6 {
-  position: relative;
-  width: 100%;
-  /* Use the aspect ratio of your images here */
-  padding-top: 133.815%; /* For a 3:2 aspect ratio image, (height/width)*100% */
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.artwork-inner7 {
-  position: relative;
-  width: 100%;
-  /* Use the aspect ratio of your images here */
-  padding-top: 71.280%; /* For a 3:2 aspect ratio image, (height/width)*100% */
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
+/* Apply box-shadow and common styles to all artwork-inner classes */
+.artwork-inner,
+.artwork-inner1,
+.artwork-inner2,
+.artwork-inner3,
+.artwork-inner4,
+.artwork-inner5,
+.artwork-inner6,
+.artwork-inner7,
 .artwork-inner8 {
   position: relative;
   width: 100%;
-  /* Use the aspect ratio of your images here */
-  padding-top: 71.280%; /* For a 3:2 aspect ratio image, (height/width)*100% */
   transform-style: preserve-3d;
   transition: transform 0.6s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
 }
+
+/* Individual aspect ratios */
+.artwork-inner { padding-top: 79.534%; }
+.artwork-inner1 { padding-top: 89.065%; }
+.artwork-inner2 { padding-top: 128.535%; }
+.artwork-inner3 { padding-top: 77.702%; }
+.artwork-inner4 { padding-top: 101.286%; }
+.artwork-inner5 { padding-top: 134.609%; }
+.artwork-inner6 { padding-top: 133.815%; }
+.artwork-inner7 { padding-top: 71.280%; }
+.artwork-inner8 { padding-top: 71.280%; }
 
 /*
 .artwork:hover .artwork-inner {
@@ -251,7 +201,6 @@ body, html {
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden; /* For Safari */
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -261,23 +210,23 @@ body, html {
   object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
-/* Remove flex properties and ensure it fills the container */
 .artwork-back {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Ensure it fills the container */
+  height: 100%;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; /* For Safari */
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #585554;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden; /* Keep this to maintain rounded corners */
+  overflow-y: auto; /* Enable scrolling */
+  background-color: #333333; /* Dark gray background */
   transform: rotateY(180deg);
   padding: 20px;
   box-sizing: border-box;
-  display: block; /* Change to block to prevent shrinking */
+  display: block;
   text-align: center;
+  color: #fff9e7; /* Off-white text */
 }
 
 .artwork-back-content {
@@ -289,8 +238,10 @@ body, html {
 }
 
 .artwork-back p {
-  margin: 10px 0 0 0;
-  color: #bdb49ee5;
+  font-size: 20;
+  margin: 0;
+  color: #e6e0d3e5;
+  line-height: 1.5;
 }
    
 /* Responsive Adjustments */
@@ -374,13 +325,9 @@ body, html {
 
 .instruction-text p {
   font-size: 24px;
-  color: #333;
-}
-
-.gloria-hallelujah-regular {
-  font-family: "Gloria Hallelujah", cursive;
-  font-weight: 400;
-  font-style: normal;
+  color: #fff9e7;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); /* Add text shadow */
+  font-weight: 530;
 }
 
 /* The Modal (background) */
@@ -439,12 +386,13 @@ body, html {
   top: 10px;          /* Distance from the top edge */
   right: 10px;        /* Distance from the right edge */
   padding: 8px 12px;
-  background-color: #bdb49e;
+  background-color: #fff9e7;
   color: #333;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .view-larger-button:hover {
